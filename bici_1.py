@@ -8,5 +8,11 @@ def load_data(nrows=500):
 
 bici_data = load_data()
 
-st.header("Biclas")
+st.header("Citi Bike")
 st.dataframe(bici_data)
+
+if st.sidebar.checkbox("View RAW data"):
+    st.subheader("Cicle Rides in NYC")
+    st.write(f"Total de registros: {len(bici_data)}")
+    st.dataframe(bici_data)
+
